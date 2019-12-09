@@ -47,9 +47,8 @@
 #include "cpl_error.h"
 #include "cpl_vsi_virtual.h"
 
-#ifdef WIN32
-#include <io.h>
-#include <fcntl.h>
+#ifdef _WIN32
+#include <corecrt_io.h>
 #endif
 
 CPL_CVSID("$Id$")
@@ -72,8 +71,8 @@ static void VSIStdinInit()
 {
     if( pabyBuffer == nullptr )
     {
-#ifdef WIN32
-        setmode( fileno( stdin ), O_BINARY );
+#ifdef _WIN32
+        _setmode( fileno( stdin ), O_BINARY );
 #endif
         pabyBuffer = static_cast<GByte *>(CPLMalloc(BUFFER_SIZE));
     }

@@ -32,6 +32,7 @@
 #include <cstddef>
 #include <cstdio>
 #include <cstring>
+
 #if HAVE_FCNTL_H
 #  include <fcntl.h>
 #endif
@@ -39,9 +40,8 @@
 #include "cpl_error.h"
 #include "cpl_vsi_virtual.h"
 
-#ifdef WIN32
-#include <io.h>
-#include <fcntl.h>
+#ifdef _WIN32
+#include <corecrt_io.h>
 #endif
 
 CPL_CVSID("$Id$")
@@ -219,9 +219,9 @@ VSIStdoutFilesystemHandler::Open( const char * /* pszFilename */,
         return nullptr;
     }
 
-#ifdef WIN32
+#ifdef _WIN32
     if ( strchr(pszAccess, 'b') != nullptr )
-        setmode( fileno( stdout ), O_BINARY );
+        _setmode( fileno( stdout ), O_BINARY );
 #endif
 
     return new VSIStdoutHandle;

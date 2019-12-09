@@ -15,6 +15,12 @@
 #include "random.h"
 #include "libqhull.h"
 
+#ifdef _MSC_VER  /* Microsoft Visual C++ */
+#define _USE_MATH_DEFINES
+#pragma warning( disable : 4706)  /* assignment within conditional expression. */
+#pragma warning( disable : 4996)  /* this function (strncat,sprintf,strcpy) or variable may be unsafe. */
+#endif
+
 #include <ctype.h>
 #include <limits.h>
 #include <math.h>
@@ -24,10 +30,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#ifdef _MSC_VER  /* Microsoft Visual C++ */
-#pragma warning( disable : 4706)  /* assignment within conditional expression. */
-#pragma warning( disable : 4996)  /* this function (strncat,sprintf,strcpy) or variable may be unsafe. */
-#endif
 
 #define MAXdim 200
 

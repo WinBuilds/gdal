@@ -29,7 +29,7 @@
 
 #include "cpl_vsi_virtual.h"
 
-CPL_CVSID("$Id$")
+CPL_CVSID("$Id: cpl_vsil_win32.cpp c39d156816d937c3139360b11786c769aeabd21e 2018-05-05 19:48:08 +0200 Even Rouault $")
 
 #if defined(WIN32)
 
@@ -40,9 +40,11 @@ CPL_CVSID("$Id$")
 
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <io.h>
-#include <fcntl.h>
-#include <direct.h>
+//#include <io.h>
+//#include <fcntl.h>
+//#include <direct.h>
+#include <fileapi.h>
+
 
 /************************************************************************/
 /* ==================================================================== */
@@ -881,83 +883,38 @@ int VSIWin32FilesystemHandler::Rmdir( const char * pszPathname )
 /************************************************************************/
 
 char **VSIWin32FilesystemHandler::ReadDirEx( const char *pszPath,
-                                             int nMaxFiles )
+                                             int nMaxFiles ) {
 
-{
-#if defined(_MSC_VER) || __MSVCRT_VERSION__ >= 0x0601
-    if( CPLTestBool( CPLGetConfigOption( "GDAL_FILENAME_IS_UTF8", "YES" ) ) )
-    {
-        struct _wfinddata_t c_file;
-        intptr_t hFile;
-        char    *pszFileSpec;
-        CPLStringList oDir;
-
-        if (strlen(pszPath) == 0)
-            pszPath = ".";
-
-        pszFileSpec = CPLStrdup(CPLSPrintf("%s\\*.*", pszPath));
-        wchar_t *pwszFileSpec =
-            CPLRecodeToWChar( pszFileSpec, CPL_ENC_UTF8, CPL_ENC_UCS2 );
-
-        if ( (hFile = _wfindfirst( pwszFileSpec, &c_file )) != -1L )
-        {
-            do
-            {
-                oDir.AddStringDirectly(
-                    CPLRecodeFromWChar(c_file.name,CPL_ENC_UCS2,CPL_ENC_UTF8));
-                if( nMaxFiles > 0 && oDir.Count() > nMaxFiles )
-                    break;
-            } while( _wfindnext( hFile, &c_file ) == 0 );
-
-            _findclose( hFile );
-        }
-        else
-        {
-            /* Should we generate an error???
-             * For now we'll just return NULL (at the end of the function)
-             */
-        }
-
-        CPLFree(pszFileSpec);
-        CPLFree(pwszFileSpec);
-
-        return oDir.StealList();
+    if( CPLTestBool( CPLGetConfigOption( "GDAL_FILENAME_IS_UTF8", "YES" ) ) ) {
     }
-    else
-#endif
-    {
-        struct _finddata_t c_file;
-        intptr_t hFile;
-        char    *pszFileSpec;
-        CPLStringList oDir;
 
-        if (strlen(pszPath) == 0)
-            pszPath = ".";
 
-        pszFileSpec = CPLStrdup(CPLSPrintf("%s\\*.*", pszPath));
+    if (strlen(pszPath) == 0)
+        pszPath = ".";
 
-        if ( (hFile = _findfirst( pszFileSpec, &c_file )) != -1L )
-        {
-            do
-            {
-                oDir.AddString(c_file.name);
-                if( nMaxFiles > 0 && oDir.Count() > nMaxFiles )
-                    break;
-            } while( _findnext( hFile, &c_file ) == 0 );
+    char* pszFileSpec = CPLStrdup(CPLSPrintf("%s\\*.*", pszPath));
+    wchar_t* pwszFileSpec = CPLRecodeToWChar( pszFileSpec, CPL_ENC_UTF8, CPL_ENC_UCS2 );
 
-            _findclose( hFile );
-        }
-        else
-        {
-            /* Should we generate an error???
-             * For now we'll just return NULL (at the end of the function)
-             */
-        }
+    WIN32_FIND_DATAW FindFileData;
+    HANDLE hFind;
+    CPLStringList oDir;
 
-        CPLFree(pszFileSpec);
+    if ( (hFind = FindFirstFileW( pwszFileSpec, &FindFileData)) != INVALID_HANDLE_VALUE) {
+        do {
+            oDir.AddStringDirectly(CPLRecodeFromWChar(FindFileData.cFileName,CPL_ENC_UCS2,CPL_ENC_UTF8));
+            if ( nMaxFiles > 0 && oDir.Count() > nMaxFiles )
+                break;
+        } while( FindNextFileW( hFind, &FindFileData) == 0 );
 
-        return oDir.StealList();
+        FindClose( hFind );
+    } else {
+        // error
     }
+
+    CPLFree(pszFileSpec);
+    CPLFree(pwszFileSpec);
+    return oDir.StealList();
+    
 }
 
 /************************************************************************/

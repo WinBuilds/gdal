@@ -8,6 +8,8 @@ config.status
 libtool
 cpl_config.h
 clean_main_build_output.bat
+*.lnk
+*.url
 *.o
 *.res
 *.obj

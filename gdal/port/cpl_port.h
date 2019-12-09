@@ -342,8 +342,8 @@ typedef unsigned int  GUIntptr_t;
 #  define CPL_C_END
 #endif
 
-#ifndef CPL_DLL
-#if defined(_MSC_VER) && !defined(CPL_DISABLE_DLL)
+//#ifndef CPL_DLL
+#if defined(GDALDLL_LIB) 
 #  define CPL_DLL     __declspec(dllexport)
 #  define CPL_INTERNAL
 #else
@@ -360,7 +360,7 @@ typedef unsigned int  GUIntptr_t;
 #  endif
 #endif
 
-#endif
+//#endif
 
 /*! @cond Doxygen_Suppress */
 /* Should optional (normally private) interfaces be exported? */

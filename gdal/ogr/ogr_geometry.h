@@ -1014,9 +1014,14 @@ class CPL_DLL OGRCurve : public OGRGeometry
 
 //! @cond Doxygen_Suppress
 /** @see OGRCurve::begin() const */
-inline OGRCurve::ConstIterator begin(const OGRCurve* poCurve) { return poCurve->begin(); }
+inline OGRCurve::ConstIterator begin(const OGRCurve* poCurve) {
+    return poCurve->begin();
+}
+
 /** @see OGRCurve::end() const */
-inline OGRCurve::ConstIterator end(const OGRCurve* poCurve) { return poCurve->end(); }
+inline OGRCurve::ConstIterator end(const OGRCurve* poCurve) {
+    return poCurve->end();
+}
 //! @endcond
 
 /************************************************************************/
