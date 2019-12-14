@@ -35,7 +35,7 @@
 #pragma GCC system_header
 #endif
 
-#include "webp/decode.h"
-#include "webp/encode.h"
+#include "libwebp/decode.h"
+#include "libwebp/encode.h"
 
 #endif /* GDAL_LIBWEBP_HEADERS_H */
