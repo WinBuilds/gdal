@@ -27,10 +27,6 @@ clean_main_build_output.bat
 .libs
 *.pyc
 *.sdf
-*.sln
-*.vcxproj
-*.vcxproj.filters
-*.vcxproj.user
 *.VC.db
 *.VC.opendb
 /[Dd]ebug

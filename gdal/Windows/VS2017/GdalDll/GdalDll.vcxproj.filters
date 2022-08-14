@@ -1,0 +1,2301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Source Files\alg">
+      <UniqueIdentifier>{2e485b61-2922-4ccc-9e94-b454550cb780}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\frmts">
+      <UniqueIdentifier>{c2e05d0c-af3e-4fcb-ad5f-1682bc1520e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gcore">
+      <UniqueIdentifier>{41393f2a-8e23-4d31-96a3-72b4ce8cc66d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gnm">
+      <UniqueIdentifier>{f4dd7418-aa25-4958-9b7c-24f764e15c7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\port">
+      <UniqueIdentifier>{05feaed5-14a0-4fc1-afd1-53b4cfa63628}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ogr">
+      <UniqueIdentifier>{1e8cb64e-b048-4e29-965b-da019d70419d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\third_party">
+      <UniqueIdentifier>{39f946fe-f7e0-422b-9737-1a36357af5dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\alg\marching_squares">
+      <UniqueIdentifier>{bc83bc14-d6c0-47c7-b33f-50083e80a51b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\alg\internal_libqhull">
+      <UniqueIdentifier>{6af51416-b3d9-4f27-97ca-03f0aa046ee5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gcore\mdreader">
+      <UniqueIdentifier>{1fafa3f8-76aa-4a3d-adca-dfa6650ae24a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gnm\gnm_frmts">
+      <UniqueIdentifier>{36770add-cf19-4c19-8b1d-3940b72b3ec5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gnm\gnm_frmts\db">
+      <UniqueIdentifier>{1b73d854-e05c-48e0-809f-7c035a34608f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gnm\gnm_frmts\file">
+      <UniqueIdentifier>{9ad43c4e-80bc-4af6-9856-44f3a910d993}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ogr\ogrfs_frmts">
+      <UniqueIdentifier>{c1a7aef2-c568-4d42-8485-14dfd6987741}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\third_party\LercLib">
+      <UniqueIdentifier>{c554e4c4-c209-419c-a57f-04cc0e0b0e50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ogr\ogrfs_frmts\generic">
+      <UniqueIdentifier>{a0d4f4d9-ed70-4388-b18f-d3f5eb80a78e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ogr\ogrfs_frmts\geojson">
+      <UniqueIdentifier>{021fdc7c-6606-414b-94e3-117fc2d3904d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ogr\ogrfs_frmts\geojson\libjson">
+      <UniqueIdentifier>{8ebc2101-dc0f-4aaa-9f48-e8c680929aa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ogr\ogrfs_frmts\mem">
+      <UniqueIdentifier>{fbe0ba45-d4c5-4c20-b759-ff37e5cec1f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ogr\ogrfs_frmts\mitab">
+      <UniqueIdentifier>{3708b5aa-678d-4605-ad1d-74d264b3ce8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\frmts\vrt">
+      <UniqueIdentifier>{9df5eb22-329a-4031-979e-1141179a0c9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\apps">
+      <UniqueIdentifier>{2cc6f59d-74d4-40bd-ae05-9affe2703c19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\frmts\gtif">
+      <UniqueIdentifier>{1c35f0b6-2409-41ba-99a5-c7930d7eb81d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\frmts\gtif\libtiff">
+      <UniqueIdentifier>{9e92b3cf-19a7-4129-87c7-d051cbb31667}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\frmts\gtif\libgeotiff">
+      <UniqueIdentifier>{5264840c-d7d5-4f6e-851b-6f42be0db4fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\frmts\zlib">
+      <UniqueIdentifier>{ee6fd4a2-7e40-4eb0-8269-b37f5348701c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\frmts\mem">
+      <UniqueIdentifier>{b18cb1c4-de27-4ce2-9eca-2d6569a9dc4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\frmts\derived">
+      <UniqueIdentifier>{97705d19-e35d-4251-a0bb-d4c6dd6d5dbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\frmts\hfa">
+      <UniqueIdentifier>{7a401b87-07af-4993-b685-7d8a44080a92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ogr\ogrfs_frmts\kml">
+      <UniqueIdentifier>{6b6c77c3-17d8-428e-a905-6b8a9b5f9604}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\frmts\zmap">
+      <UniqueIdentifier>{1b998344-898b-4a6f-885b-30e5c1d0df7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\frmts\xyz">
+      <UniqueIdentifier>{b63beeb5-5bfd-4110-849d-47198fddf6b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\frmts\xpm">
+      <UniqueIdentifier>{2edc23cc-2e1e-4660-aeb5-ec8a0c0bfd92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\frmts\wmts">
+      <UniqueIdentifier>{c0434862-6b2a-4606-8e4f-7549c2570efa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\frmts\wms">
+      <UniqueIdentifier>{4d873046-c2f9-4cd4-847d-b5590626b312}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\frmts\webp">
+      <UniqueIdentifier>{c8299a5e-3bdf-4acf-b5b1-136f86a7df88}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\alg\contour.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\delaunay.c">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdal_crs.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdal_octave.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdal_rpc.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdal_simplesurf.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdal_tps.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdalapplyverticalshiftgrid.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdalchecksum.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdalcutline.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdaldither.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdalgeoloc.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdalgrid.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdalgridavx.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdalgridsse.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdallinearsystem.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdalmatching.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdalmediancut.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdalpansharpen.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdalproximity.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdalrasterize.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdalrasterpolygonenumerator.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdalsievefilter.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdalsimplewarp.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdaltransformer.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdaltransformgeolocs.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdalwarper.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdalwarpkernel.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdalwarpkernel_opencl.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\gdalwarpoperation.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\llrasterize.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\polygonize.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\rasterfill.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\thinplatespline.cpp">
+      <Filter>Source Files\alg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\internal_libqhull\geom.c">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\internal_libqhull\geom2.c">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\internal_libqhull\global.c">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\internal_libqhull\io.c">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\internal_libqhull\libqhull.c">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\internal_libqhull\mem.c">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\internal_libqhull\merge.c">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\internal_libqhull\poly.c">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\internal_libqhull\poly2.c">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\internal_libqhull\qset.c">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\internal_libqhull\random.c">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\internal_libqhull\rboxlib.c">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\internal_libqhull\stat.c">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\internal_libqhull\user.c">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\internal_libqhull\usermem.c">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\internal_libqhull\userprintf.c">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\alg\internal_libqhull\userprintf_rbox.c">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gdalallregister.cpp">
+      <Filter>Source Files\frmts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdal_mdreader.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdal_misc.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdal_rat.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalabstractbandblockcache.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalallvalidmaskband.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalarraybandblockcache.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalclientserver.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalcolortable.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdaldataset.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdaldefaultasync.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdaldefaultoverviews.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdaldllmain.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdaldriver.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdaldrivermanager.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalexif.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalgeorefpamdataset.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalhashsetbandblockcache.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdaljp2abstractdataset.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdaljp2box.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdaljp2metadata.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdaljp2metadatagenerator.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdaljp2structure.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalmajorobject.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalmultidomainmetadata.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalnodatamaskband.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalnodatavaluesmaskband.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalopeninfo.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdaloverviewdataset.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalpamdataset.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalpamproxydb.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalpamrasterband.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalproxydataset.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalproxypool.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalrasterband.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalrasterblock.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalrescaledalphaband.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\gdalvirtualmem.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\overview.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\rasterio.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\rasterio_ssse3.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\rawdataset.cpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_alos.cpp">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_digital_globe.cpp">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_eros.cpp">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_geo_eye.cpp">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_kompsat.cpp">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_landsat.cpp">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_orb_view.cpp">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_pleiades.cpp">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_rapid_eye.cpp">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_rdk1.cpp">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_spot.cpp">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gnm\gnmgenericnetwork.cpp">
+      <Filter>Source Files\gnm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gnm\gnmgraph.cpp">
+      <Filter>Source Files\gnm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gnm\gnmlayer.cpp">
+      <Filter>Source Files\gnm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gnm\gnmnetwork.cpp">
+      <Filter>Source Files\gnm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gnm\gnmresultlayer.cpp">
+      <Filter>Source Files\gnm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gnm\gnmrule.cpp">
+      <Filter>Source Files\gnm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gnm\gnm_frmts\gnmregisterall.cpp">
+      <Filter>Source Files\gnm\gnm_frmts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gnm\gnm_frmts\db\gnmdbdriver.cpp">
+      <Filter>Source Files\gnm\gnm_frmts\db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gnm\gnm_frmts\db\gnmdbnetwork.cpp">
+      <Filter>Source Files\gnm\gnm_frmts\db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gnm\gnm_frmts\file\gnmfiledriver.cpp">
+      <Filter>Source Files\gnm\gnm_frmts\file</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gnm\gnm_frmts\file\gnmfilenetwork.cpp">
+      <Filter>Source Files\gnm\gnm_frmts\file</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\gml2ogrgeometry.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogr_api.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogr_expat.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogr_fromepsg.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogr_geo_utils.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogr_geocoding.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogr_proj_p.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogr_srs_dict.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogr_srs_erm.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogr_srs_esri.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogr_srs_ozi.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogr_srs_panorama.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogr_srs_pci.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogr_srs_usgs.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogr_srs_xml.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogr_srsnode.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogr_xerces.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogr2gmlgeometry.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ograpispy.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ograssemblepolygon.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrcircularstring.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrcompoundcurve.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrct.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrcurve.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrcurvecollection.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrcurvepolygon.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrfeature.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrfeaturedefn.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrfeaturequery.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrfeaturestyle.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrfielddefn.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrgeomediageometry.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrgeometry.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrgeometrycollection.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrgeometryfactory.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrgeomfielddefn.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrlinearring.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrlinestring.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrmulticurve.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrmultilinestring.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrmultipoint.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrmultipolygon.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrmultisurface.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrpgeogeometry.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrpoint.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrpolygon.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrpolyhedralsurface.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrspatialreference.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsurface.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrtriangle.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrtriangulatedsurface.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrutils.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\swq.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\swq_expr_node.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\swq_op_general.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\swq_op_registrar.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\swq_parser.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\swq_select.cpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_alibaba_oss.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_atomic_ops.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_aws.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_azure.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_base64.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_cpu_features.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_csv.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_error.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_findfile.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_getexecpath.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_google_cloud.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_google_oauth2.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_hash_set.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_http.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_json.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_json_streaming_parser.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_list.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_md5.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_minixml.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_multiproc.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_odbc.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_path.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_progress.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_quad_tree.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_recode.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_recode_iconv.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_recode_stub.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_sha1.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_sha256.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_spawn.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_string.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_strtod.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_swift.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_time.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_userfaultfd.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_virtualmem.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsi_error.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsi_mem.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_abstract_archive.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_az.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_buffered_reader.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_cache.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_crypt.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_curl.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_curl_streaming.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_gs.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_hdfs.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_oss.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_plugin.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_s3.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_sparsefile.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_stdin.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_stdout.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_subfile.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_swift.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_tar.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_win32.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsisimple.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_worker_thread_pool.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_xml_validate.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cplgetsymbol.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cplkeywordparser.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cplstring.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cplstringlist.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\vsipreload.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\third_party\LercLib\BitMask.cpp">
+      <Filter>Source Files\third_party\LercLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\third_party\LercLib\BitStuffer2.cpp">
+      <Filter>Source Files\third_party\LercLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\third_party\LercLib\Huffman.cpp">
+      <Filter>Source Files\third_party\LercLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\third_party\LercLib\Lerc.cpp">
+      <Filter>Source Files\third_party\LercLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\third_party\LercLib\Lerc_c_api_impl.cpp">
+      <Filter>Source Files\third_party\LercLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\third_party\LercLib\Lerc2.cpp">
+      <Filter>Source Files\third_party\LercLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\third_party\LercLib\RLE.cpp">
+      <Filter>Source Files\third_party\LercLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_conv.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogr_attrind.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogr_gensql.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogr_miattrind.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrdatasource.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogreditablelayer.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogremulatedtransaction.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrlayer.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrlayerdecorator.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrlayerpool.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrmutexeddatasource.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrmutexedlayer.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrregisterall.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrsfdriver.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrsfdriverregistrar.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrunionlayer.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrwarpedlayer.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogresrijsondriver.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogresrijsonreader.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsondatasource.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsondriver.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsonlayer.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsonreader.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsonseqdriver.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsonutils.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsonwritelayer.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsonwriter.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrtopojsondriver.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrtopojsonreader.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\arraylist.c">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\debug.c">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_c_version.c">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_object.c">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_object_iterator.c">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_tokener.c">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_util.c">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\linkhash.c">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\printbuf.c">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mem\ogrmemdatasource.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mem\ogrmemdriver.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mem\ogrmemlayer.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_bounds.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_coordsys.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_datfile.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_feature.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_feature_mif.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_geometry.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_idfile.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_imapinfofile.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_indfile.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_mapcoordblock.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_mapfile.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_mapheaderblock.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_mapindexblock.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_mapobjectblock.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_maptoolblock.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_middatafile.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_miffile.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_ogr_datasource.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_ogr_driver.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_rawbinblock.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_spatialref.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_tabfile.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_tabseamless.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_tabview.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_tooldef.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_utils.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\vrt\pixelfunctions.cpp">
+      <Filter>Source Files\frmts\vrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\vrt\vrtdataset.cpp">
+      <Filter>Source Files\frmts\vrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\vrt\vrtderivedrasterband.cpp">
+      <Filter>Source Files\frmts\vrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\vrt\vrtdriver.cpp">
+      <Filter>Source Files\frmts\vrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\vrt\vrtfilters.cpp">
+      <Filter>Source Files\frmts\vrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\vrt\vrtpansharpened.cpp">
+      <Filter>Source Files\frmts\vrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\vrt\vrtrasterband.cpp">
+      <Filter>Source Files\frmts\vrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\vrt\vrtrawrasterband.cpp">
+      <Filter>Source Files\frmts\vrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\vrt\vrtsourcedrasterband.cpp">
+      <Filter>Source Files\frmts\vrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\vrt\vrtsources.cpp">
+      <Filter>Source Files\frmts\vrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\vrt\vrtwarped.cpp">
+      <Filter>Source Files\frmts\vrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\apps\commonutils.cpp">
+      <Filter>Source Files\apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\geotiff.cpp">
+      <Filter>Source Files\frmts\gtif</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\gt_citation.cpp">
+      <Filter>Source Files\frmts\gtif</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\gt_jpeg_copy.cpp">
+      <Filter>Source Files\frmts\gtif</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\gt_overview.cpp">
+      <Filter>Source Files\frmts\gtif</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\gt_wkt_srs.cpp">
+      <Filter>Source Files\frmts\gtif</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\tif_float.c">
+      <Filter>Source Files\frmts\gtif</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\tif_lerc.c">
+      <Filter>Source Files\frmts\gtif</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\tifvsi.cpp">
+      <Filter>Source Files\frmts\gtif</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_aux.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_close.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_codec.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_color.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_compress.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_dir.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_dirinfo.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_dirread.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_dirwrite.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_dumpmode.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_error.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_extension.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_fax3.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_fax3sm.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_flush.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_getimage.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_jpeg.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_jpeg_12.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_luv.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_lzma.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_lzw.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_next.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_ojpeg.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_open.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_packbits.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_pixarlog.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_predict.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_print.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_read.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_strip.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_swab.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_thunder.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_tile.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_version.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_vsi.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_warning.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_webp.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_write.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_zip.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_zstd.c">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_extra.c">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_free.c">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_get.c">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_names.c">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_new.c">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_normalize.c">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_print.c">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_set.c">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_simpletags.c">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_tiffp.c">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_trans.c">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_write.c">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geotiff_proj4.c">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\xtiff.c">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\zlib\adler32.c">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\zlib\compress.c">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\zlib\crc32.c">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\zlib\deflate.c">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\zlib\gzio.c">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\zlib\infback.c">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\zlib\inffast.c">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\zlib\inflate.c">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\zlib\inftrees.c">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\zlib\trees.c">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\zlib\uncompr.c">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\zlib\zutil.c">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\apps\gdalbuildvrt_lib.cpp">
+      <Filter>Source Files\apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\apps\gdal_grid_lib.cpp">
+      <Filter>Source Files\apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\apps\gdal_rasterize_lib.cpp">
+      <Filter>Source Files\apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\apps\gdal_translate_lib.cpp">
+      <Filter>Source Files\apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\apps\gdaldem_lib.cpp">
+      <Filter>Source Files\apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\apps\gdalinfo_lib.cpp">
+      <Filter>Source Files\apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\apps\gdalwarp_lib.cpp">
+      <Filter>Source Files\apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\apps\nearblack_lib.cpp">
+      <Filter>Source Files\apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\apps\ogr2ogr_lib.cpp">
+      <Filter>Source Files\apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\mem\memdataset.cpp">
+      <Filter>Source Files\frmts\mem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\derived\deriveddataset.cpp">
+      <Filter>Source Files\frmts\derived</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\derived\derivedlist.c">
+      <Filter>Source Files\frmts\derived</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\hfa\hfa_overviews.cpp">
+      <Filter>Source Files\frmts\hfa</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\hfa\hfaband.cpp">
+      <Filter>Source Files\frmts\hfa</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\hfa\hfacompress.cpp">
+      <Filter>Source Files\frmts\hfa</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\hfa\hfadataset.cpp">
+      <Filter>Source Files\frmts\hfa</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\hfa\hfadictionary.cpp">
+      <Filter>Source Files\frmts\hfa</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\hfa\hfaentry.cpp">
+      <Filter>Source Files\frmts\hfa</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\hfa\hfafield.cpp">
+      <Filter>Source Files\frmts\hfa</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\hfa\hfaopen.cpp">
+      <Filter>Source Files\frmts\hfa</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\hfa\hfatype.cpp">
+      <Filter>Source Files\frmts\hfa</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\kml\kml.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\kml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\kml\kmlnode.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\kml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\kml\kmlvector.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\kml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\kml\ogr2kmlgeometry.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\kml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\kml\ogrkmldatasource.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\kml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\kml\ogrkmldriver.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\kml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\kml\ogrkmllayer.cpp">
+      <Filter>Source Files\ogr\ogrfs_frmts\kml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\zmap\zmapdataset.cpp">
+      <Filter>Source Files\frmts\zmap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\xyz\xyzdataset.cpp">
+      <Filter>Source Files\frmts\xyz</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\xpm\xpmdataset.cpp">
+      <Filter>Source Files\frmts\xpm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\wmts\wmtsdataset.cpp">
+      <Filter>Source Files\frmts\wmts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\wms\gdalhttp.cpp">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\wms\gdalwmscache.cpp">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\wms\gdalwmsdataset.cpp">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\wms\gdalwmsrasterband.cpp">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\wms\minidriver.cpp">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\wms\minidriver_arcgis_server.cpp">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\wms\minidriver_iip.cpp">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\wms\minidriver_mrf.cpp">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\wms\minidriver_tiled_wms.cpp">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\wms\minidriver_tileservice.cpp">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\wms\minidriver_tms.cpp">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\wms\minidriver_virtualearth.cpp">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\wms\minidriver_wms.cpp">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\wms\minidriver_worldwind.cpp">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\wms\wmsdriver.cpp">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\wms\wmsmetadataset.cpp">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\wms\wmsutils.cpp">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_minizip_ioapi.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_minizip_unzip.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_minizip_zip.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_gzip.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_simple.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_unix_stdio_64.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_webhdfs.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\xmlreformat.cpp">
+      <Filter>Source Files\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\frmts\webp\webpdataset.cpp">
+      <Filter>Source Files\frmts\webp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\alg\gdal_alg.h">
+      <Filter>Source Files\alg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\gdal_alg_priv.h">
+      <Filter>Source Files\alg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\gdal_simplesurf.h">
+      <Filter>Source Files\alg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\gdalgrid.h">
+      <Filter>Source Files\alg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\gdalgrid_priv.h">
+      <Filter>Source Files\alg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\gdallinearsystem.h">
+      <Filter>Source Files\alg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\gdalpansharpen.h">
+      <Filter>Source Files\alg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\gdalwarper.h">
+      <Filter>Source Files\alg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\gdalwarpkernel_opencl.h">
+      <Filter>Source Files\alg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\gvgcpfit.h">
+      <Filter>Source Files\alg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\internal_qhull_headers.h">
+      <Filter>Source Files\alg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\thinplatespline.h">
+      <Filter>Source Files\alg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\marching_squares\contour_generator.h">
+      <Filter>Source Files\alg\marching_squares</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\marching_squares\level_generator.h">
+      <Filter>Source Files\alg\marching_squares</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\marching_squares\point.h">
+      <Filter>Source Files\alg\marching_squares</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\marching_squares\polygon_ring_appender.h">
+      <Filter>Source Files\alg\marching_squares</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\marching_squares\segment_merger.h">
+      <Filter>Source Files\alg\marching_squares</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\marching_squares\square.h">
+      <Filter>Source Files\alg\marching_squares</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\marching_squares\utility.h">
+      <Filter>Source Files\alg\marching_squares</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\internal_libqhull\geom.h">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\internal_libqhull\io.h">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\internal_libqhull\libqhull.h">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\internal_libqhull\mem.h">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\internal_libqhull\merge.h">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\internal_libqhull\poly.h">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\internal_libqhull\qhull_a.h">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\internal_libqhull\qset.h">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\internal_libqhull\random.h">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\internal_libqhull\stat.h">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\alg\internal_libqhull\user.h">
+      <Filter>Source Files\alg\internal_libqhull</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\gdal.h">
+      <Filter>Source Files\gcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\gdal_avx2_emulation.hpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\gdal_frmts.h">
+      <Filter>Source Files\gcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\gdal_mdreader.h">
+      <Filter>Source Files\gcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\gdal_pam.h">
+      <Filter>Source Files\gcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\gdal_priv.h">
+      <Filter>Source Files\gcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\gdal_priv_templates.hpp">
+      <Filter>Source Files\gcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\gdal_proxy.h">
+      <Filter>Source Files\gcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\gdal_rat.h">
+      <Filter>Source Files\gcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\gdal_version.h">
+      <Filter>Source Files\gcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\gdalexif.h">
+      <Filter>Source Files\gcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\gdalgeorefpamdataset.h">
+      <Filter>Source Files\gcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\gdaljp2abstractdataset.h">
+      <Filter>Source Files\gcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\gdaljp2metadata.h">
+      <Filter>Source Files\gcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\gdaljp2metadatagenerator.h">
+      <Filter>Source Files\gcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\gdalsse_priv.h">
+      <Filter>Source Files\gcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\rawdataset.h">
+      <Filter>Source Files\gcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_alos.h">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_digital_globe.h">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_eros.h">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_geo_eye.h">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_kompsat.h">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_landsat.h">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_orb_view.h">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_pleiades.h">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_rapid_eye.h">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_rdk1.h">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_spot.h">
+      <Filter>Source Files\gcore\mdreader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gnm\gnm.h">
+      <Filter>Source Files\gnm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gnm\gnm_api.h">
+      <Filter>Source Files\gnm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gnm\gnm_priv.h">
+      <Filter>Source Files\gnm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gnm\gnmgraph.h">
+      <Filter>Source Files\gnm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gnm\gnm_frmts\gnm_frmts.h">
+      <Filter>Source Files\gnm\gnm_frmts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gnm\gnm_frmts\db\gnmdb.h">
+      <Filter>Source Files\gnm\gnm_frmts\db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\gnm\gnm_frmts\file\gnmfile.h">
+      <Filter>Source Files\gnm\gnm_frmts\file</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogr_api.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogr_core.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogr_expat.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogr_feature.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogr_featurestyle.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogr_geo_utils.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogr_geocoding.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogr_geometry.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogr_geos.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogr_libs.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogr_p.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogr_proj_p.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogr_sfcgal.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogr_spatialref.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogr_srs_api.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogr_srs_esri_names.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogr_xerces.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogr_xerces_headers.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ograpispy.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrgeomediageometry.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrpgeogeometry.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\swq.h">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\swq_parser.hpp">
+      <Filter>Source Files\ogr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\ogr_attrind.h">
+      <Filter>Source Files\ogr\ogrfs_frmts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\ogrsf_frmts.h">
+      <Filter>Source Files\ogr\ogrfs_frmts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_alibaba_oss.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_atomic_ops.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_auto_close.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_aws.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_azure.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_config.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_config_extras.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_cpu_features.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_csv.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_error.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_google_cloud.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_hash_set.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_http.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_json.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_json_header.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_json_streaming_parser.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_list.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_md5.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_mem_cache.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_minixml.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_multiproc.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_odbc.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_port.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_progress.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_quad_tree.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_safemaths.hpp">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_sha1.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_sha256.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_spawn.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_string.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_swift.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_time.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_userfaultfd.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_virtualmem.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_vsi.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_vsi_error.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_vsi_virtual.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_vsil_curl_class.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_vsil_curl_priv.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_vsil_plugin.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_worker_thread_pool.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cplkeywordparser.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\gdal_csv.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\third_party\LercLib\BitMask.h">
+      <Filter>Source Files\third_party\LercLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\third_party\LercLib\BitStuffer2.h">
+      <Filter>Source Files\third_party\LercLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\third_party\LercLib\Defines.h">
+      <Filter>Source Files\third_party\LercLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\third_party\LercLib\Huffman.h">
+      <Filter>Source Files\third_party\LercLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\third_party\LercLib\Lerc.h">
+      <Filter>Source Files\third_party\LercLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\third_party\LercLib\Lerc_c_api.h">
+      <Filter>Source Files\third_party\LercLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\third_party\LercLib\Lerc_types.h">
+      <Filter>Source Files\third_party\LercLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\third_party\LercLib\Lerc2.h">
+      <Filter>Source Files\third_party\LercLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\third_party\LercLib\RLE.h">
+      <Filter>Source Files\third_party\LercLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_conv.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\generic\ogr_gensql.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\generic\ogreditablelayer.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\generic\ogremulatedtransaction.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\generic\ogrlayerdecorator.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\generic\ogrlayerpool.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\generic\ogrmutexeddatasource.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\generic\ogrmutexedlayer.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\generic\ogrunionlayer.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\generic\ogrwarpedlayer.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\ogr_geojson.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsonreader.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsonutils.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsonwriter.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\arraylist.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\bits.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\config.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\debug.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_c_version.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_config.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_inttypes.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_object.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_object_iterator.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_object_private.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_tokener.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_util.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\linkhash.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\printbuf.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\symbol_renames.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\geojson\libjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\mem\ogr_mem.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\mem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_geometry.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_ogr_driver.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_priv.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_utils.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\mitab</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\vrt\gdal_vrt.h">
+      <Filter>Source Files\frmts\vrt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\vrt\vrtdataset.h">
+      <Filter>Source Files\frmts\vrt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\apps\commonutils.h">
+      <Filter>Source Files\apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\apps\gdal_utils.h">
+      <Filter>Source Files\apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\apps\gdal_utils_priv.h">
+      <Filter>Source Files\apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\gt_citation.h">
+      <Filter>Source Files\frmts\gtif</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\gt_jpeg_copy.h">
+      <Filter>Source Files\frmts\gtif</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\gt_overview.h">
+      <Filter>Source Files\frmts\gtif</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\gt_wkt_srs.h">
+      <Filter>Source Files\frmts\gtif</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\gt_wkt_srs_for_gdal.h">
+      <Filter>Source Files\frmts\gtif</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\gt_wkt_srs_priv.h">
+      <Filter>Source Files\frmts\gtif</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\gtiff.h">
+      <Filter>Source Files\frmts\gtif</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\tif_float.h">
+      <Filter>Source Files\frmts\gtif</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\tif_lerc.h">
+      <Filter>Source Files\frmts\gtif</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\tifvsi.h">
+      <Filter>Source Files\frmts\gtif</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\gdal_libtiff_symbol_rename.h">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\t4.h">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\tif_config.h">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\tif_dir.h">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\tif_fax3.h">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\tif_predict.h">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\tiff.h">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\tiffconf.h">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\tiffio.h">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\tiffiop.h">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\tiffvers.h">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\uvcode.h">
+      <Filter>Source Files\frmts\gtif\libtiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\cpl_serv.h">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\gdal_libgeotiff_symbol_rename.h">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geo_config.h">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geo_keyp.h">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geo_normalize.h">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geo_simpletags.h">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geo_tiffp.h">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geokeys.h">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geonames.h">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geotiff.h">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geotiffio.h">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geovalues.h">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\xtiffio.h">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\zlib\crc32.h">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\zlib\deflate.h">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\zlib\inffast.h">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\zlib\inffixed.h">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\zlib\inflate.h">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\zlib\inftrees.h">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\zlib\trees.h">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\zlib\zconf.h">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\zlib\zlib.h">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\zlib\zutil.h">
+      <Filter>Source Files\frmts\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\mem\memdataset.h">
+      <Filter>Source Files\frmts\mem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\derived\derivedlist.h">
+      <Filter>Source Files\frmts\derived</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\hfa\hfa.h">
+      <Filter>Source Files\frmts\hfa</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\hfa\hfa_p.h">
+      <Filter>Source Files\frmts\hfa</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\hfa\hfadataset.h">
+      <Filter>Source Files\frmts\hfa</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\kml\kml.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\kml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\kml\kmlnode.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\kml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\kml\kmlutility.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\kml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\kml\kmlvector.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\kml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\kml\ogr_kml.h">
+      <Filter>Source Files\ogr\ogrfs_frmts\kml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\wms\gdalhttp.h">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\wms\minidriver_arcgis_server.h">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\wms\minidriver_iip.h">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\wms\minidriver_mrf.h">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\wms\minidriver_tiled_wms.h">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\wms\minidriver_tileservice.h">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\wms\minidriver_tms.h">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\wms\minidriver_virtualearth.h">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\wms\minidriver_wms.h">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\wms\minidriver_worldwind.h">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\wms\wmsdriver.h">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\wms\wmsmetadataset.h">
+      <Filter>Source Files\frmts\wms</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_minizip_ioapi.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_minizip_unzip.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_minizip_zip.h">
+      <Filter>Source Files\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\frmts\webp\webp_headers.h">
+      <Filter>Source Files\frmts\webp</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\epsg_datum.inc">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </None>
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\epsg_ellipse.inc">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </None>
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\epsg_gcs.inc">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </None>
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\epsg_pcs.inc">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </None>
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\epsg_pm.inc">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </None>
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\epsg_proj.inc">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </None>
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\epsg_units.inc">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </None>
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\epsg_vertcs.inc">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </None>
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\geo_ctrans.inc">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </None>
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\geokeys.inc">
+      <Filter>Source Files\frmts\gtif\libgeotiff</Filter>
+    </None>
+  </ItemGroup>
+</Project>

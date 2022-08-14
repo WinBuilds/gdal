@@ -1,0 +1,876 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DAE7FC27-D6F0-4FBA-96E1-C40DC27FABF4}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
+    <QtMsBuild>$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(WINBUILDS_ROOT)build_msvc16_$(Platform)/$(Configuration)/lib/</OutDir>
+    <IntDir>$(WINBUILDS_ROOT)build_msvc16_$(Platform)/$(Configuration)/obj/$(TargetName)/</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(WINBUILDS_ROOT)build_msvc16_$(Platform)/$(Configuration)/lib/</OutDir>
+    <IntDir>$(WINBUILDS_ROOT)build_msvc16_$(Platform)/$(Configuration)/obj/$(TargetName)/</IntDir>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>WIN32;WIN64;NOMINMAX;_ENABLE_EXTENDED_ALIGNED_STORAGE;GDAL_COMPILATION;HAVE_EXPAT;HAVE_CURL;GDALLIB_LIB;BUILD_STATIC;QT_DLL;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;.\GeneratedFiles;.\GeneratedFiles\$(ConfigurationName);..\..\..\alg;..\..\..\alg\marching_squares;..\..\..\alg\internal_libqhull;..\..\..\apps;..\..\..\port;..\..\..\frmts\vrt;..\..\..\frmts\mem;..\..\..\frmts\gtiff;..\..\..\frmts\gtiff\libtiff;..\..\..\frmts\gtiff\libgeotiff;..\..\..\frmts\zlib;..\..\..\gcore;..\..\..\gnm;..\..\..\gnm\gnm_frmts;..\..\..\ogr;..\..\..\ogr\ogrsf_frmts;..\..\..\ogr\ogrsf_frmts\generic;..\..\..\ogr\ogrsf_frmts\mem;..\..\..\ogr\ogrsf_frmts\geojson;..\..\..\ogr\ogrsf_frmts\geojson\libjson;..\..\..\third_party\LercLib;$(WINBUILDS_ROOT)build_msvc16_$(Platform)/$(Configuration)/include;$(WINBUILDS_ROOT)build_msvc16_$(Platform)/$(Configuration)/include/iconv;$(WINBUILDS_ROOT)build_msvc16_$(Platform)/$(Configuration)/include/proj;$(WINBUILDS_ROOT)build_msvc16_$(Platform)/$(Configuration)/include/sqlite3;$(WINBUILDS_ROOT)build_msvc16_$(Platform)/$(Configuration)/include/hdf5;$(WINBUILDS_ROOT)build_msvc16_$(Platform)/$(Configuration)/include/libexpat;$(QTDIR)\include;$(QTDIR)\include\QtCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).lib</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <QtMoc>
+      <Define>WIN32;WIN64;NOMINMAX;_ENABLE_EXTENDED_ALIGNED_STORAGE;GDAL_COMPILATION;HAVE_EXPAT;HAVE_CURL;GDALLIB_LIB;BUILD_STATIC;QT_DLL;QT_CORE_LIB;%(PreprocessorDefinitions)</Define>
+      <IncludePath>.;.\GeneratedFiles;.\GeneratedFiles\$(ConfigurationName);..\..\..\alg;..\..\..\alg\marching_squares;..\..\..\alg\internal_libqhull;..\..\..\apps;..\..\..\port;..\..\..\frmts\vrt;..\..\..\frmts\mem;..\..\..\frmts\gtiff;..\..\..\frmts\gtiff\libtiff;..\..\..\frmts\gtiff\libgeotiff;..\..\..\frmts\zlib;..\..\..\gcore;..\..\..\gnm;..\..\..\gnm\gnm_frmts;..\..\..\ogr;..\..\..\ogr\ogrsf_frmts;..\..\..\ogr\ogrsf_frmts\generic;..\..\..\ogr\ogrsf_frmts\mem;..\..\..\ogr\ogrsf_frmts\geojson;..\..\..\ogr\ogrsf_frmts\geojson\libjson;..\..\..\third_party\LercLib;$(WINBUILDS_ROOT)build_msvc15_$(Platform)/$(Configuration)/include;$(WINBUILDS_ROOT)build_msvc15_$(Platform)/$(Configuration)/include/iconv;$(WINBUILDS_ROOT)build_msvc15_$(Platform)/$(Configuration)/include/proj;$(WINBUILDS_ROOT)build_msvc15_$(Platform)/$(Configuration)/include/sqlite3;$(WINBUILDS_ROOT)build_msvc15_$(Platform)/$(Configuration)/include/hdf5;$(WINBUILDS_ROOT)build_msvc15_$(Platform)/$(Configuration)/include/libexpat;$(QTDIR)\include;$(QTDIR)\include\QtCore;%(AdditionalIncludeDirectories)</IncludePath>
+    </QtMoc>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\..\port;..\..\..\ogr;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>WIN32;WIN64;NDEBUG;NOMINMAX;_ENABLE_EXTENDED_ALIGNED_STORAGE;GDAL_COMPILATION;HAVE_EXPAT;HAVE_CURL;GDALLIB_LIB;BUILD_STATIC;QT_DLL;QT_NO_DEBUG;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;.\GeneratedFiles;.\GeneratedFiles\$(ConfigurationName);..\..\..\alg;..\..\..\alg\marching_squares;..\..\..\alg\internal_libqhull;..\..\..\apps;..\..\..\port;..\..\..\frmts\vrt;..\..\..\frmts\mem;..\..\..\frmts\gtiff;..\..\..\frmts\gtiff\libtiff;..\..\..\frmts\gtiff\libgeotiff;..\..\..\frmts\zlib;..\..\..\gcore;..\..\..\gnm;..\..\..\gnm\gnm_frmts;..\..\..\ogr;..\..\..\ogr\ogrsf_frmts;..\..\..\ogr\ogrsf_frmts\generic;..\..\..\ogr\ogrsf_frmts\mem;..\..\..\ogr\ogrsf_frmts\geojson;..\..\..\ogr\ogrsf_frmts\geojson\libjson;..\..\..\third_party\LercLib;$(WINBUILDS_ROOT)build_msvc16_$(Platform)/$(Configuration)/include;$(WINBUILDS_ROOT)build_msvc16_$(Platform)/$(Configuration)/include/iconv;$(WINBUILDS_ROOT)build_msvc16_$(Platform)/$(Configuration)/include/proj;$(WINBUILDS_ROOT)build_msvc16_$(Platform)/$(Configuration)/include/sqlite3;$(WINBUILDS_ROOT)build_msvc16_$(Platform)/$(Configuration)/include/hdf5;$(WINBUILDS_ROOT)build_msvc16_$(Platform)/$(Configuration)/include/libexpat;$(QTDIR)\include;$(QTDIR)\include\QtCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).lib</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <QtMoc>
+      <Define>WIN32;WIN64;NDEBUG;NOMINMAX;_ENABLE_EXTENDED_ALIGNED_STORAGE;GDAL_COMPILATION;HAVE_EXPAT;HAVE_CURL;GDALLIB_LIB;BUILD_STATIC;QT_DLL;QT_NO_DEBUG;QT_CORE_LIB;%(PreprocessorDefinitions)</Define>
+      <IncludePath>.;.\GeneratedFiles;.\GeneratedFiles\$(ConfigurationName);..\..\..\alg;..\..\..\alg\marching_squares;..\..\..\alg\internal_libqhull;..\..\..\apps;..\..\..\port;..\..\..\frmts\vrt;..\..\..\frmts\mem;..\..\..\frmts\gtiff;..\..\..\frmts\gtiff\libtiff;..\..\..\frmts\gtiff\libgeotiff;..\..\..\frmts\zlib;..\..\..\gcore;..\..\..\gnm;..\..\..\gnm\gnm_frmts;..\..\..\ogr;..\..\..\ogr\ogrsf_frmts;..\..\..\ogr\ogrsf_frmts\generic;..\..\..\ogr\ogrsf_frmts\mem;..\..\..\ogr\ogrsf_frmts\geojson;..\..\..\ogr\ogrsf_frmts\geojson\libjson;..\..\..\third_party\LercLib;$(WINBUILDS_ROOT)build_msvc15_$(Platform)/$(Configuration)/include;$(WINBUILDS_ROOT)build_msvc15_$(Platform)/$(Configuration)/include/iconv;$(WINBUILDS_ROOT)build_msvc15_$(Platform)/$(Configuration)/include/proj;$(WINBUILDS_ROOT)build_msvc15_$(Platform)/$(Configuration)/include/sqlite3;$(WINBUILDS_ROOT)build_msvc15_$(Platform)/$(Configuration)/include/hdf5;$(WINBUILDS_ROOT)build_msvc15_$(Platform)/$(Configuration)/include/libexpat;$(QTDIR)\include;$(QTDIR)\include\QtCore;%(AdditionalIncludeDirectories)</IncludePath>
+    </QtMoc>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..\..\port;..\..\..\ogr;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\alg\contour.cpp" />
+    <ClCompile Include="..\..\..\alg\delaunay.c" />
+    <ClCompile Include="..\..\..\alg\gdalapplyverticalshiftgrid.cpp" />
+    <ClCompile Include="..\..\..\alg\gdalchecksum.cpp" />
+    <ClCompile Include="..\..\..\alg\gdalcutline.cpp" />
+    <ClCompile Include="..\..\..\alg\gdaldither.cpp" />
+    <ClCompile Include="..\..\..\alg\gdalgeoloc.cpp" />
+    <ClCompile Include="..\..\..\alg\gdalgrid.cpp" />
+    <ClCompile Include="..\..\..\alg\gdalgridavx.cpp" />
+    <ClCompile Include="..\..\..\alg\gdalgridsse.cpp" />
+    <ClCompile Include="..\..\..\alg\gdallinearsystem.cpp" />
+    <ClCompile Include="..\..\..\alg\gdalmatching.cpp" />
+    <ClCompile Include="..\..\..\alg\gdalmediancut.cpp" />
+    <ClCompile Include="..\..\..\alg\gdalpansharpen.cpp" />
+    <ClCompile Include="..\..\..\alg\gdalproximity.cpp" />
+    <ClCompile Include="..\..\..\alg\gdalrasterize.cpp" />
+    <ClCompile Include="..\..\..\alg\gdalrasterpolygonenumerator.cpp" />
+    <ClCompile Include="..\..\..\alg\gdalsievefilter.cpp" />
+    <ClCompile Include="..\..\..\alg\gdalsimplewarp.cpp" />
+    <ClCompile Include="..\..\..\alg\gdaltransformer.cpp" />
+    <ClCompile Include="..\..\..\alg\gdaltransformgeolocs.cpp" />
+    <ClCompile Include="..\..\..\alg\gdalwarper.cpp" />
+    <ClCompile Include="..\..\..\alg\gdalwarpkernel.cpp" />
+    <ClCompile Include="..\..\..\alg\gdalwarpkernel_opencl.cpp" />
+    <ClCompile Include="..\..\..\alg\gdalwarpoperation.cpp" />
+    <ClCompile Include="..\..\..\alg\gdal_crs.cpp" />
+    <ClCompile Include="..\..\..\alg\gdal_octave.cpp" />
+    <ClCompile Include="..\..\..\alg\gdal_rpc.cpp" />
+    <ClCompile Include="..\..\..\alg\gdal_simplesurf.cpp" />
+    <ClCompile Include="..\..\..\alg\gdal_tps.cpp" />
+    <ClCompile Include="..\..\..\alg\internal_libqhull\geom.c" />
+    <ClCompile Include="..\..\..\alg\internal_libqhull\geom2.c" />
+    <ClCompile Include="..\..\..\alg\internal_libqhull\global.c" />
+    <ClCompile Include="..\..\..\alg\internal_libqhull\io.c" />
+    <ClCompile Include="..\..\..\alg\internal_libqhull\libqhull.c" />
+    <ClCompile Include="..\..\..\alg\internal_libqhull\mem.c" />
+    <ClCompile Include="..\..\..\alg\internal_libqhull\merge.c" />
+    <ClCompile Include="..\..\..\alg\internal_libqhull\poly.c" />
+    <ClCompile Include="..\..\..\alg\internal_libqhull\poly2.c" />
+    <ClCompile Include="..\..\..\alg\internal_libqhull\qset.c" />
+    <ClCompile Include="..\..\..\alg\internal_libqhull\random.c" />
+    <ClCompile Include="..\..\..\alg\internal_libqhull\rboxlib.c" />
+    <ClCompile Include="..\..\..\alg\internal_libqhull\stat.c" />
+    <ClCompile Include="..\..\..\alg\internal_libqhull\user.c" />
+    <ClCompile Include="..\..\..\alg\internal_libqhull\usermem.c" />
+    <ClCompile Include="..\..\..\alg\internal_libqhull\userprintf.c" />
+    <ClCompile Include="..\..\..\alg\internal_libqhull\userprintf_rbox.c" />
+    <ClCompile Include="..\..\..\alg\llrasterize.cpp" />
+    <ClCompile Include="..\..\..\alg\polygonize.cpp" />
+    <ClCompile Include="..\..\..\alg\rasterfill.cpp" />
+    <ClCompile Include="..\..\..\alg\thinplatespline.cpp" />
+    <ClCompile Include="..\..\..\apps\commonutils.cpp" />
+    <ClCompile Include="..\..\..\apps\gdalbuildvrt_lib.cpp" />
+    <ClCompile Include="..\..\..\apps\gdaldem_lib.cpp" />
+    <ClCompile Include="..\..\..\apps\gdalinfo_lib.cpp" />
+    <ClCompile Include="..\..\..\apps\gdalwarp_lib.cpp" />
+    <ClCompile Include="..\..\..\apps\gdal_rasterize_lib.cpp" />
+    <ClCompile Include="..\..\..\apps\gdal_translate_lib.cpp" />
+    <ClCompile Include="..\..\..\apps\nearblack_lib.cpp" />
+    <ClCompile Include="..\..\..\apps\ogr2ogr_lib.cpp" />
+    <ClCompile Include="..\..\..\frmts\derived\deriveddataset.cpp" />
+    <ClCompile Include="..\..\..\frmts\derived\derivedlist.c" />
+    <ClCompile Include="..\..\..\frmts\gdalallregister.cpp" />
+    <ClCompile Include="..\..\..\frmts\gtiff\geotiff.cpp" />
+    <ClCompile Include="..\..\..\frmts\gtiff\gt_citation.cpp" />
+    <ClCompile Include="..\..\..\frmts\gtiff\gt_jpeg_copy.cpp" />
+    <ClCompile Include="..\..\..\frmts\gtiff\gt_overview.cpp" />
+    <ClCompile Include="..\..\..\frmts\gtiff\gt_wkt_srs.cpp" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geotiff_proj4.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_extra.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_free.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_get.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_names.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_new.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_normalize.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_print.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_set.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_simpletags.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_tiffp.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_trans.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\geo_write.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libgeotiff\xtiff.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_aux.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_close.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_codec.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_color.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_compress.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_dir.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_dirinfo.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_dirread.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_dirwrite.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_dumpmode.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_error.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_extension.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_fax3.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_fax3sm.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_flush.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_getimage.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_jpeg.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_jpeg_12.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_luv.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_lzma.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_lzw.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_next.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_ojpeg.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_open.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_packbits.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_pixarlog.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_predict.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_print.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_read.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_strip.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_swab.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_thunder.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_tile.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_version.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_vsi.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_warning.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_webp.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_write.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_zip.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\libtiff\tif_zstd.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\tifvsi.cpp" />
+    <ClCompile Include="..\..\..\frmts\gtiff\tif_float.c" />
+    <ClCompile Include="..\..\..\frmts\gtiff\tif_lerc.c" />
+    <ClCompile Include="..\..\..\frmts\hfa\hfaband.cpp" />
+    <ClCompile Include="..\..\..\frmts\hfa\hfacompress.cpp" />
+    <ClCompile Include="..\..\..\frmts\hfa\hfadataset.cpp" />
+    <ClCompile Include="..\..\..\frmts\hfa\hfadictionary.cpp" />
+    <ClCompile Include="..\..\..\frmts\hfa\hfaentry.cpp" />
+    <ClCompile Include="..\..\..\frmts\hfa\hfafield.cpp" />
+    <ClCompile Include="..\..\..\frmts\hfa\hfaopen.cpp" />
+    <ClCompile Include="..\..\..\frmts\hfa\hfatype.cpp" />
+    <ClCompile Include="..\..\..\frmts\hfa\hfa_overviews.cpp" />
+    <ClCompile Include="..\..\..\frmts\mem\memdataset.cpp" />
+    <ClCompile Include="..\..\..\frmts\vrt\pixelfunctions.cpp" />
+    <ClCompile Include="..\..\..\frmts\vrt\vrtdataset.cpp" />
+    <ClCompile Include="..\..\..\frmts\vrt\vrtderivedrasterband.cpp" />
+    <ClCompile Include="..\..\..\frmts\vrt\vrtdriver.cpp" />
+    <ClCompile Include="..\..\..\frmts\vrt\vrtfilters.cpp" />
+    <ClCompile Include="..\..\..\frmts\vrt\vrtpansharpened.cpp" />
+    <ClCompile Include="..\..\..\frmts\vrt\vrtrasterband.cpp" />
+    <ClCompile Include="..\..\..\frmts\vrt\vrtrawrasterband.cpp" />
+    <ClCompile Include="..\..\..\frmts\vrt\vrtsourcedrasterband.cpp" />
+    <ClCompile Include="..\..\..\frmts\vrt\vrtsources.cpp" />
+    <ClCompile Include="..\..\..\frmts\vrt\vrtwarped.cpp" />
+    <ClCompile Include="..\..\..\frmts\webp\webpdataset.cpp" />
+    <ClCompile Include="..\..\..\frmts\wms\gdalhttp.cpp" />
+    <ClCompile Include="..\..\..\frmts\wms\gdalwmscache.cpp" />
+    <ClCompile Include="..\..\..\frmts\wms\gdalwmsdataset.cpp" />
+    <ClCompile Include="..\..\..\frmts\wms\gdalwmsrasterband.cpp" />
+    <ClCompile Include="..\..\..\frmts\wms\minidriver.cpp" />
+    <ClCompile Include="..\..\..\frmts\wms\minidriver_arcgis_server.cpp" />
+    <ClCompile Include="..\..\..\frmts\wms\minidriver_iip.cpp" />
+    <ClCompile Include="..\..\..\frmts\wms\minidriver_mrf.cpp" />
+    <ClCompile Include="..\..\..\frmts\wms\minidriver_tiled_wms.cpp" />
+    <ClCompile Include="..\..\..\frmts\wms\minidriver_tileservice.cpp" />
+    <ClCompile Include="..\..\..\frmts\wms\minidriver_tms.cpp" />
+    <ClCompile Include="..\..\..\frmts\wms\minidriver_virtualearth.cpp" />
+    <ClCompile Include="..\..\..\frmts\wms\minidriver_wms.cpp" />
+    <ClCompile Include="..\..\..\frmts\wms\minidriver_worldwind.cpp" />
+    <ClCompile Include="..\..\..\frmts\wms\wmsdriver.cpp" />
+    <ClCompile Include="..\..\..\frmts\wms\wmsmetadataset.cpp" />
+    <ClCompile Include="..\..\..\frmts\wms\wmsutils.cpp" />
+    <ClCompile Include="..\..\..\frmts\wmts\wmtsdataset.cpp" />
+    <ClCompile Include="..\..\..\frmts\xpm\xpmdataset.cpp" />
+    <ClCompile Include="..\..\..\frmts\xyz\xyzdataset.cpp" />
+    <ClCompile Include="..\..\..\frmts\zlib\adler32.c" />
+    <ClCompile Include="..\..\..\frmts\zlib\compress.c" />
+    <ClCompile Include="..\..\..\frmts\zlib\crc32.c" />
+    <ClCompile Include="..\..\..\frmts\zlib\deflate.c" />
+    <ClCompile Include="..\..\..\frmts\zlib\gzio.c" />
+    <ClCompile Include="..\..\..\frmts\zlib\infback.c" />
+    <ClCompile Include="..\..\..\frmts\zlib\inffast.c" />
+    <ClCompile Include="..\..\..\frmts\zlib\inflate.c" />
+    <ClCompile Include="..\..\..\frmts\zlib\inftrees.c" />
+    <ClCompile Include="..\..\..\frmts\zlib\trees.c" />
+    <ClCompile Include="..\..\..\frmts\zlib\uncompr.c" />
+    <ClCompile Include="..\..\..\frmts\zlib\zutil.c" />
+    <ClCompile Include="..\..\..\frmts\zmap\zmapdataset.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalabstractbandblockcache.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalallvalidmaskband.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalarraybandblockcache.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalclientserver.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalcolortable.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdaldataset.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdaldefaultasync.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdaldefaultoverviews.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdaldllmain.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdaldriver.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdaldrivermanager.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalexif.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalgeorefpamdataset.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalhashsetbandblockcache.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdaljp2abstractdataset.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdaljp2box.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdaljp2metadata.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdaljp2metadatagenerator.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdaljp2structure.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalmajorobject.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalmultidomainmetadata.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalnodatamaskband.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalnodatavaluesmaskband.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalopeninfo.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdaloverviewdataset.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalpamdataset.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalpamproxydb.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalpamrasterband.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalproxydataset.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalproxypool.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalrasterband.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalrasterblock.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalrescaledalphaband.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdalvirtualmem.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdal_mdreader.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdal_misc.cpp" />
+    <ClCompile Include="..\..\..\gcore\gdal_rat.cpp" />
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_alos.cpp" />
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_digital_globe.cpp" />
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_eros.cpp" />
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_geo_eye.cpp" />
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_kompsat.cpp" />
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_landsat.cpp" />
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_orb_view.cpp" />
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_pleiades.cpp" />
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_rapid_eye.cpp" />
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_rdk1.cpp" />
+    <ClCompile Include="..\..\..\gcore\mdreader\reader_spot.cpp" />
+    <ClCompile Include="..\..\..\gcore\overview.cpp" />
+    <ClCompile Include="..\..\..\gcore\rasterio.cpp" />
+    <ClCompile Include="..\..\..\gcore\rasterio_ssse3.cpp" />
+    <ClCompile Include="..\..\..\gcore\rawdataset.cpp" />
+    <ClCompile Include="..\..\..\gnm\gnmgenericnetwork.cpp" />
+    <ClCompile Include="..\..\..\gnm\gnmgraph.cpp" />
+    <ClCompile Include="..\..\..\gnm\gnmlayer.cpp" />
+    <ClCompile Include="..\..\..\gnm\gnmnetwork.cpp" />
+    <ClCompile Include="..\..\..\gnm\gnmresultlayer.cpp" />
+    <ClCompile Include="..\..\..\gnm\gnmrule.cpp" />
+    <ClCompile Include="..\..\..\gnm\gnm_frmts\db\gnmdbdriver.cpp" />
+    <ClCompile Include="..\..\..\gnm\gnm_frmts\db\gnmdbnetwork.cpp" />
+    <ClCompile Include="..\..\..\gnm\gnm_frmts\file\gnmfiledriver.cpp" />
+    <ClCompile Include="..\..\..\gnm\gnm_frmts\file\gnmfilenetwork.cpp" />
+    <ClCompile Include="..\..\..\gnm\gnm_frmts\gnmregisterall.cpp" />
+    <ClCompile Include="..\..\..\ogr\gml2ogrgeometry.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogr2gmlgeometry.cpp" />
+    <ClCompile Include="..\..\..\ogr\ograpispy.cpp" />
+    <ClCompile Include="..\..\..\ogr\ograssemblepolygon.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrcircularstring.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrcompoundcurve.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrct.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrcurve.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrcurvecollection.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrcurvepolygon.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrfeature.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrfeaturedefn.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrfeaturequery.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrfeaturestyle.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrfielddefn.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrgeomediageometry.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrgeometry.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrgeometrycollection.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrgeometryfactory.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrgeomfielddefn.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrlinearring.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrlinestring.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrmulticurve.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrmultilinestring.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrmultipoint.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrmultipolygon.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrmultisurface.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrpgeogeometry.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrpoint.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrpolygon.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrpolyhedralsurface.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrdatasource.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogreditablelayer.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogremulatedtransaction.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrlayer.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrlayerdecorator.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrlayerpool.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrmutexeddatasource.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrmutexedlayer.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrregisterall.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrsfdriver.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrsfdriverregistrar.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrunionlayer.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogrwarpedlayer.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogr_attrind.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogr_gensql.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\generic\ogr_miattrind.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\arraylist.c" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\debug.c" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_c_version.c" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_object.c" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_object_iterator.c" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_tokener.c" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_util.c" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\linkhash.c" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\printbuf.c" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogresrijsondriver.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogresrijsonreader.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsondatasource.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsondriver.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsonlayer.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsonreader.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsonseqdriver.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsonutils.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsonwritelayer.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsonwriter.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrtopojsondriver.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrtopojsonreader.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\kml\kml.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\kml\kmlnode.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\kml\kmlvector.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\kml\ogr2kmlgeometry.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\kml\ogrkmldatasource.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\kml\ogrkmldriver.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\kml\ogrkmllayer.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mem\ogrmemdatasource.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mem\ogrmemdriver.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mem\ogrmemlayer.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_bounds.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_coordsys.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_datfile.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_feature.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_feature_mif.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_geometry.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_idfile.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_imapinfofile.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_indfile.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_mapcoordblock.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_mapfile.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_mapheaderblock.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_mapindexblock.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_mapobjectblock.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_maptoolblock.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_middatafile.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_miffile.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_ogr_datasource.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_ogr_driver.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_rawbinblock.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_spatialref.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_tabfile.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_tabseamless.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_tabview.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_tooldef.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_utils.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrspatialreference.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrsurface.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrtriangle.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrtriangulatedsurface.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogrutils.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogr_api.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogr_expat.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogr_fromepsg.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogr_geocoding.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogr_geo_utils.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogr_proj_p.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogr_srsnode.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogr_srs_dict.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogr_srs_erm.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogr_srs_esri.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogr_srs_ozi.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogr_srs_panorama.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogr_srs_pci.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogr_srs_usgs.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogr_srs_xml.cpp" />
+    <ClCompile Include="..\..\..\ogr\ogr_xerces.cpp" />
+    <ClCompile Include="..\..\..\ogr\swq.cpp" />
+    <ClCompile Include="..\..\..\ogr\swq_expr_node.cpp" />
+    <ClCompile Include="..\..\..\ogr\swq_op_general.cpp" />
+    <ClCompile Include="..\..\..\ogr\swq_op_registrar.cpp" />
+    <ClCompile Include="..\..\..\ogr\swq_parser.cpp" />
+    <ClCompile Include="..\..\..\ogr\swq_select.cpp" />
+    <ClCompile Include="..\..\..\port\cplgetsymbol.cpp" />
+    <ClCompile Include="..\..\..\port\cplkeywordparser.cpp" />
+    <ClCompile Include="..\..\..\port\cplstring.cpp" />
+    <ClCompile Include="..\..\..\port\cplstringlist.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_alibaba_oss.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_atomic_ops.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_aws.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_azure.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_base64.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_conv.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_cpu_features.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_csv.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_error.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_findfile.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_getexecpath.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_google_cloud.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_google_oauth2.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_hash_set.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_http.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_json.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_json_streaming_parser.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_list.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_md5.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_minixml.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_minizip_ioapi.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_minizip_unzip.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_minizip_zip.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_multiproc.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_odbc.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_path.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_progress.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_quad_tree.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_recode.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_recode_iconv.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_recode_stub.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_sha1.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_sha256.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_spawn.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_string.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_strtod.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_swift.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_time.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_userfaultfd.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_virtualmem.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_abstract_archive.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_az.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_buffered_reader.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_cache.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_crypt.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_curl.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_curl_streaming.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_gs.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_gzip.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_hdfs.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_oss.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_plugin.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_s3.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_simple.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsil_sparsefile.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_stdin.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_stdout.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_subfile.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_swift.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_tar.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_unix_stdio_64.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_webhdfs.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsil_win32.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\cpl_vsisimple.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsi_error.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_vsi_mem.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_worker_thread_pool.cpp" />
+    <ClCompile Include="..\..\..\port\cpl_xml_validate.cpp" />
+    <ClCompile Include="..\..\..\port\vsipreload.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\port\xmlreformat.cpp" />
+    <ClCompile Include="..\..\..\third_party\LercLib\BitMask.cpp" />
+    <ClCompile Include="..\..\..\third_party\LercLib\BitStuffer2.cpp" />
+    <ClCompile Include="..\..\..\third_party\LercLib\Huffman.cpp" />
+    <ClCompile Include="..\..\..\third_party\LercLib\Lerc.cpp" />
+    <ClCompile Include="..\..\..\third_party\LercLib\Lerc2.cpp" />
+    <ClCompile Include="..\..\..\third_party\LercLib\Lerc_c_api_impl.cpp" />
+    <ClCompile Include="..\..\..\third_party\LercLib\RLE.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\alg\gdalgrid.h" />
+    <ClInclude Include="..\..\..\alg\gdalgrid_priv.h" />
+    <ClInclude Include="..\..\..\alg\gdallinearsystem.h" />
+    <ClInclude Include="..\..\..\alg\gdalpansharpen.h" />
+    <ClInclude Include="..\..\..\alg\gdalwarper.h" />
+    <ClInclude Include="..\..\..\alg\gdalwarpkernel_opencl.h" />
+    <ClInclude Include="..\..\..\alg\gdal_alg.h" />
+    <ClInclude Include="..\..\..\alg\gdal_alg_priv.h" />
+    <ClInclude Include="..\..\..\alg\gdal_simplesurf.h" />
+    <ClInclude Include="..\..\..\alg\gvgcpfit.h" />
+    <ClInclude Include="..\..\..\alg\internal_libqhull\geom.h" />
+    <ClInclude Include="..\..\..\alg\internal_libqhull\io.h" />
+    <ClInclude Include="..\..\..\alg\internal_libqhull\libqhull.h" />
+    <ClInclude Include="..\..\..\alg\internal_libqhull\mem.h" />
+    <ClInclude Include="..\..\..\alg\internal_libqhull\merge.h" />
+    <ClInclude Include="..\..\..\alg\internal_libqhull\poly.h" />
+    <ClInclude Include="..\..\..\alg\internal_libqhull\qhull_a.h" />
+    <ClInclude Include="..\..\..\alg\internal_libqhull\qset.h" />
+    <ClInclude Include="..\..\..\alg\internal_libqhull\random.h" />
+    <ClInclude Include="..\..\..\alg\internal_libqhull\stat.h" />
+    <ClInclude Include="..\..\..\alg\internal_libqhull\user.h" />
+    <ClInclude Include="..\..\..\alg\internal_qhull_headers.h" />
+    <ClInclude Include="..\..\..\alg\marching_squares\contour_generator.h" />
+    <ClInclude Include="..\..\..\alg\marching_squares\level_generator.h" />
+    <ClInclude Include="..\..\..\alg\marching_squares\point.h" />
+    <ClInclude Include="..\..\..\alg\marching_squares\polygon_ring_appender.h" />
+    <ClInclude Include="..\..\..\alg\marching_squares\segment_merger.h" />
+    <ClInclude Include="..\..\..\alg\marching_squares\square.h" />
+    <ClInclude Include="..\..\..\alg\marching_squares\utility.h" />
+    <ClInclude Include="..\..\..\alg\thinplatespline.h" />
+    <ClInclude Include="..\..\..\apps\commonutils.h" />
+    <ClInclude Include="..\..\..\apps\gdal_utils.h" />
+    <ClInclude Include="..\..\..\apps\gdal_utils_priv.h" />
+    <ClInclude Include="..\..\..\frmts\derived\derivedlist.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\gtiff.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\gt_citation.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\gt_jpeg_copy.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\gt_overview.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\gt_wkt_srs.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\gt_wkt_srs_for_gdal.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\gt_wkt_srs_priv.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\cpl_serv.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\gdal_libgeotiff_symbol_rename.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geokeys.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geonames.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geotiff.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geotiffio.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geovalues.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geo_config.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geo_keyp.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geo_normalize.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geo_simpletags.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\geo_tiffp.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libgeotiff\xtiffio.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\gdal_libtiff_symbol_rename.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\t4.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\tiff.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\tiffconf.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\tiffio.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\tiffiop.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\tiffvers.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\tif_config.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\tif_dir.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\tif_fax3.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\tif_predict.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\libtiff\uvcode.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\tifvsi.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\tif_float.h" />
+    <ClInclude Include="..\..\..\frmts\gtiff\tif_lerc.h" />
+    <ClInclude Include="..\..\..\frmts\hfa\hfa.h" />
+    <ClInclude Include="..\..\..\frmts\hfa\hfadataset.h" />
+    <ClInclude Include="..\..\..\frmts\hfa\hfa_p.h" />
+    <ClInclude Include="..\..\..\frmts\mem\memdataset.h" />
+    <ClInclude Include="..\..\..\frmts\vrt\gdal_vrt.h" />
+    <ClInclude Include="..\..\..\frmts\vrt\vrtdataset.h" />
+    <ClInclude Include="..\..\..\frmts\webp\webp_headers.h" />
+    <ClInclude Include="..\..\..\frmts\wms\gdalhttp.h" />
+    <ClInclude Include="..\..\..\frmts\wms\minidriver_arcgis_server.h" />
+    <ClInclude Include="..\..\..\frmts\wms\minidriver_iip.h" />
+    <ClInclude Include="..\..\..\frmts\wms\minidriver_mrf.h" />
+    <ClInclude Include="..\..\..\frmts\wms\minidriver_tiled_wms.h" />
+    <ClInclude Include="..\..\..\frmts\wms\minidriver_tileservice.h" />
+    <ClInclude Include="..\..\..\frmts\wms\minidriver_tms.h" />
+    <ClInclude Include="..\..\..\frmts\wms\minidriver_virtualearth.h" />
+    <ClInclude Include="..\..\..\frmts\wms\minidriver_wms.h" />
+    <ClInclude Include="..\..\..\frmts\wms\minidriver_worldwind.h" />
+    <ClInclude Include="..\..\..\frmts\wms\wmsdriver.h" />
+    <ClInclude Include="..\..\..\frmts\wms\wmsmetadataset.h" />
+    <ClInclude Include="..\..\..\frmts\zlib\crc32.h" />
+    <ClInclude Include="..\..\..\frmts\zlib\deflate.h" />
+    <ClInclude Include="..\..\..\frmts\zlib\inffast.h" />
+    <ClInclude Include="..\..\..\frmts\zlib\inffixed.h" />
+    <ClInclude Include="..\..\..\frmts\zlib\inflate.h" />
+    <ClInclude Include="..\..\..\frmts\zlib\inftrees.h" />
+    <ClInclude Include="..\..\..\frmts\zlib\trees.h" />
+    <ClInclude Include="..\..\..\frmts\zlib\zconf.h" />
+    <ClInclude Include="..\..\..\frmts\zlib\zlib.h" />
+    <ClInclude Include="..\..\..\frmts\zlib\zutil.h" />
+    <ClInclude Include="..\..\..\gcore\gdal.h" />
+    <ClInclude Include="..\..\..\gcore\gdalexif.h" />
+    <ClInclude Include="..\..\..\gcore\gdalgeorefpamdataset.h" />
+    <ClInclude Include="..\..\..\gcore\gdaljp2abstractdataset.h" />
+    <ClInclude Include="..\..\..\gcore\gdaljp2metadata.h" />
+    <ClInclude Include="..\..\..\gcore\gdaljp2metadatagenerator.h" />
+    <ClInclude Include="..\..\..\gcore\gdalsse_priv.h" />
+    <ClInclude Include="..\..\..\gcore\gdal_avx2_emulation.hpp" />
+    <ClInclude Include="..\..\..\gcore\gdal_frmts.h" />
+    <ClInclude Include="..\..\..\gcore\gdal_mdreader.h" />
+    <ClInclude Include="..\..\..\gcore\gdal_pam.h" />
+    <ClInclude Include="..\..\..\gcore\gdal_priv.h" />
+    <ClInclude Include="..\..\..\gcore\gdal_priv_templates.hpp" />
+    <ClInclude Include="..\..\..\gcore\gdal_proxy.h" />
+    <ClInclude Include="..\..\..\gcore\gdal_rat.h" />
+    <ClInclude Include="..\..\..\gcore\gdal_version.h" />
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_alos.h" />
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_digital_globe.h" />
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_eros.h" />
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_geo_eye.h" />
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_kompsat.h" />
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_landsat.h" />
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_orb_view.h" />
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_pleiades.h" />
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_rapid_eye.h" />
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_rdk1.h" />
+    <ClInclude Include="..\..\..\gcore\mdreader\reader_spot.h" />
+    <ClInclude Include="..\..\..\gcore\rawdataset.h" />
+    <ClInclude Include="..\..\..\gnm\gnm.h" />
+    <ClInclude Include="..\..\..\gnm\gnmgraph.h" />
+    <ClInclude Include="..\..\..\gnm\gnm_api.h" />
+    <ClInclude Include="..\..\..\gnm\gnm_frmts\db\gnmdb.h" />
+    <ClInclude Include="..\..\..\gnm\gnm_frmts\file\gnmfile.h" />
+    <ClInclude Include="..\..\..\gnm\gnm_frmts\gnm_frmts.h" />
+    <ClInclude Include="..\..\..\gnm\gnm_priv.h" />
+    <ClInclude Include="..\..\..\ogr\ograpispy.h" />
+    <ClInclude Include="..\..\..\ogr\ogrgeomediageometry.h" />
+    <ClInclude Include="..\..\..\ogr\ogrpgeogeometry.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\generic\ogreditablelayer.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\generic\ogremulatedtransaction.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\generic\ogrlayerdecorator.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\generic\ogrlayerpool.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\generic\ogrmutexeddatasource.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\generic\ogrmutexedlayer.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\generic\ogrunionlayer.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\generic\ogrwarpedlayer.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\generic\ogr_gensql.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\arraylist.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\bits.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\config.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\debug.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_config.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_c_version.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_inttypes.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_object.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_object_iterator.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_object_private.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_tokener.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\json_util.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\linkhash.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\printbuf.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\libjson\symbol_renames.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsonreader.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsonutils.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\ogrgeojsonwriter.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\geojson\ogr_geojson.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\kml\kml.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\kml\kmlnode.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\kml\kmlutility.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\kml\kmlvector.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\kml\ogr_kml.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\mem\ogr_mem.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_geometry.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_ogr_driver.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_priv.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\mitab\mitab_utils.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\ogrsf_frmts.h" />
+    <ClInclude Include="..\..\..\ogr\ogrsf_frmts\ogr_attrind.h" />
+    <ClInclude Include="..\..\..\ogr\ogr_api.h" />
+    <ClInclude Include="..\..\..\ogr\ogr_core.h" />
+    <ClInclude Include="..\..\..\ogr\ogr_expat.h" />
+    <ClInclude Include="..\..\..\ogr\ogr_feature.h" />
+    <ClInclude Include="..\..\..\ogr\ogr_featurestyle.h" />
+    <ClInclude Include="..\..\..\ogr\ogr_geocoding.h" />
+    <ClInclude Include="..\..\..\ogr\ogr_geometry.h" />
+    <ClInclude Include="..\..\..\ogr\ogr_geos.h" />
+    <ClInclude Include="..\..\..\ogr\ogr_geo_utils.h" />
+    <ClInclude Include="..\..\..\ogr\ogr_libs.h" />
+    <ClInclude Include="..\..\..\ogr\ogr_p.h" />
+    <ClInclude Include="..\..\..\ogr\ogr_proj_p.h" />
+    <ClInclude Include="..\..\..\ogr\ogr_sfcgal.h" />
+    <ClInclude Include="..\..\..\ogr\ogr_spatialref.h" />
+    <ClInclude Include="..\..\..\ogr\ogr_srs_api.h" />
+    <ClInclude Include="..\..\..\ogr\ogr_srs_esri_names.h" />
+    <ClInclude Include="..\..\..\ogr\ogr_xerces.h" />
+    <ClInclude Include="..\..\..\ogr\ogr_xerces_headers.h" />
+    <ClInclude Include="..\..\..\ogr\swq.h" />
+    <ClInclude Include="..\..\..\ogr\swq_parser.hpp" />
+    <ClInclude Include="..\..\..\port\cplkeywordparser.h" />
+    <ClInclude Include="..\..\..\port\cpl_alibaba_oss.h" />
+    <ClInclude Include="..\..\..\port\cpl_atomic_ops.h" />
+    <ClInclude Include="..\..\..\port\cpl_auto_close.h" />
+    <ClInclude Include="..\..\..\port\cpl_aws.h" />
+    <ClInclude Include="..\..\..\port\cpl_azure.h" />
+    <ClInclude Include="..\..\..\port\cpl_config.h" />
+    <ClInclude Include="..\..\..\port\cpl_config_extras.h" />
+    <ClInclude Include="..\..\..\port\cpl_conv.h" />
+    <ClInclude Include="..\..\..\port\cpl_cpu_features.h" />
+    <ClInclude Include="..\..\..\port\cpl_csv.h" />
+    <ClInclude Include="..\..\..\port\cpl_error.h" />
+    <ClInclude Include="..\..\..\port\cpl_google_cloud.h" />
+    <ClInclude Include="..\..\..\port\cpl_hash_set.h" />
+    <ClInclude Include="..\..\..\port\cpl_http.h" />
+    <ClInclude Include="..\..\..\port\cpl_json.h" />
+    <ClInclude Include="..\..\..\port\cpl_json_header.h" />
+    <ClInclude Include="..\..\..\port\cpl_json_streaming_parser.h" />
+    <ClInclude Include="..\..\..\port\cpl_list.h" />
+    <ClInclude Include="..\..\..\port\cpl_md5.h" />
+    <ClInclude Include="..\..\..\port\cpl_mem_cache.h" />
+    <ClInclude Include="..\..\..\port\cpl_minixml.h" />
+    <ClInclude Include="..\..\..\port\cpl_minizip_ioapi.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_minizip_unzip.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_minizip_zip.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\port\cpl_multiproc.h" />
+    <ClInclude Include="..\..\..\port\cpl_odbc.h" />
+    <ClInclude Include="..\..\..\port\cpl_port.h" />
+    <ClInclude Include="..\..\..\port\cpl_progress.h" />
+    <ClInclude Include="..\..\..\port\cpl_quad_tree.h" />
+    <ClInclude Include="..\..\..\port\cpl_safemaths.hpp" />
+    <ClInclude Include="..\..\..\port\cpl_sha1.h" />
+    <ClInclude Include="..\..\..\port\cpl_sha256.h" />
+    <ClInclude Include="..\..\..\port\cpl_spawn.h" />
+    <ClInclude Include="..\..\..\port\cpl_string.h" />
+    <ClInclude Include="..\..\..\port\cpl_swift.h" />
+    <ClInclude Include="..\..\..\port\cpl_time.h" />
+    <ClInclude Include="..\..\..\port\cpl_userfaultfd.h" />
+    <ClInclude Include="..\..\..\port\cpl_virtualmem.h" />
+    <ClInclude Include="..\..\..\port\cpl_vsi.h" />
+    <ClInclude Include="..\..\..\port\cpl_vsil_curl_class.h" />
+    <ClInclude Include="..\..\..\port\cpl_vsil_curl_priv.h" />
+    <ClInclude Include="..\..\..\port\cpl_vsil_plugin.h" />
+    <ClInclude Include="..\..\..\port\cpl_vsi_error.h" />
+    <ClInclude Include="..\..\..\port\cpl_vsi_virtual.h" />
+    <ClInclude Include="..\..\..\port\cpl_worker_thread_pool.h" />
+    <ClInclude Include="..\..\..\port\gdal_csv.h" />
+    <ClInclude Include="..\..\..\third_party\LercLib\BitMask.h" />
+    <ClInclude Include="..\..\..\third_party\LercLib\BitStuffer2.h" />
+    <ClInclude Include="..\..\..\third_party\LercLib\Defines.h" />
+    <ClInclude Include="..\..\..\third_party\LercLib\Huffman.h" />
+    <ClInclude Include="..\..\..\third_party\LercLib\Lerc.h" />
+    <ClInclude Include="..\..\..\third_party\LercLib\Lerc2.h" />
+    <ClInclude Include="..\..\..\third_party\LercLib\Lerc_c_api.h" />
+    <ClInclude Include="..\..\..\third_party\LercLib\Lerc_types.h" />
+    <ClInclude Include="..\..\..\third_party\LercLib\RLE.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\epsg_datum.inc" />
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\epsg_ellipse.inc" />
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\epsg_gcs.inc" />
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\epsg_pcs.inc" />
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\epsg_pm.inc" />
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\epsg_proj.inc" />
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\epsg_units.inc" />
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\epsg_vertcs.inc" />
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\geokeys.inc" />
+    <None Include="..\..\..\frmts\gtiff\libgeotiff\geo_ctrans.inc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" Qt5Version_x0020_x64="msvc2017_64" MocOptions="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
