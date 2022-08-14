@@ -5,10 +5,7 @@
 *.obj
 *.pyc
 *.so
-*.so
 *.url
-*.user
-*.user.*
 *~
 .cproject
 .idea
